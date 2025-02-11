@@ -75,12 +75,13 @@ public class Interfaz2 extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         Title = new javax.swing.JPanel();
         red_squr = new javax.swing.JPanel();
-        exit = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         menuItemSalir = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -194,10 +195,6 @@ public class Interfaz2 extends javax.swing.JFrame {
         contentLayout.setHorizontalGroup(
             contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(contentLayout.createSequentialGroup()
-                .addContainerGap(625, Short.MAX_VALUE)
-                .addComponent(potencia)
-                .addGap(133, 133, 133))
-            .addGroup(contentLayout.createSequentialGroup()
                 .addGap(181, 181, 181)
                 .addComponent(jLabel6)
                 .addGap(27, 27, 27)
@@ -210,7 +207,12 @@ public class Interfaz2 extends javax.swing.JFrame {
                         .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(contentLayout.createSequentialGroup()
                         .addGap(60, 60, 60)
-                        .addComponent(resultadoFuncionY, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(resultadoFuncionY, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(157, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contentLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(potencia)
+                .addGap(126, 126, 126))
             .addGroup(contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(contentLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -242,9 +244,9 @@ public class Interfaz2 extends javax.swing.JFrame {
         contentLayout.setVerticalGroup(
             contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contentLayout.createSequentialGroup()
-                .addGap(21, 21, 21)
+                .addGap(27, 27, 27)
                 .addComponent(potencia)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 258, Short.MAX_VALUE)
+                .addGap(252, 252, 252)
                 .addComponent(resultadoFuncionY)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -312,32 +314,15 @@ public class Interfaz2 extends javax.swing.JFrame {
             }
         });
 
-        exit.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        exit.setForeground(new java.awt.Color(102, 102, 102));
-        exit.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        exit.setText("X");
-        exit.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        exit.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                exitMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                exitMouseExited(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                exitMousePressed(evt);
-            }
-        });
-
         javax.swing.GroupLayout red_squrLayout = new javax.swing.GroupLayout(red_squr);
         red_squr.setLayout(red_squrLayout);
         red_squrLayout.setHorizontalGroup(
             red_squrLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(exit, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(0, 36, Short.MAX_VALUE)
         );
         red_squrLayout.setVerticalGroup(
             red_squrLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(exit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGap(0, 30, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout TitleLayout = new javax.swing.GroupLayout(Title);
@@ -353,7 +338,7 @@ public class Interfaz2 extends javax.swing.JFrame {
             .addComponent(red_squr, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        getContentPane().add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, -1));
+        getContentPane().add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 30));
 
         jMenu1.setText("Inicio");
 
@@ -376,6 +361,22 @@ public class Interfaz2 extends javax.swing.JFrame {
             }
         });
         jMenu2.add(jMenuItem1);
+
+        jMenuItem2.setText("Contacto");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem2);
+
+        jMenuItem3.setText("Manual de Usuario");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem3);
 
         jMenuBar1.add(jMenu2);
 
@@ -431,33 +432,10 @@ public class Interfaz2 extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_menuItemSalirActionPerformed
 
-    private void exitMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitMouseEntered
-        red_squr.setBackground(new Color(204,0,0));
-        exit.setForeground(Color.white);
-    }//GEN-LAST:event_exitMouseEntered
-
-    private void exitMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitMouseExited
-        red_squr.setBackground(new Color(255,255,255));
-        exit.setForeground(new Color(102,102,102));
-    }//GEN-LAST:event_exitMouseExited
-
-    private void exitMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitMousePressed
-        System.exit(0);
-    }//GEN-LAST:event_exitMousePressed
-
-    private void red_squrMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_red_squrMouseEntered
-        red_squr.setBackground(new Color(204,0,0));
-        exit.setForeground(Color.white);
-    }//GEN-LAST:event_red_squrMouseEntered
-
-    private void red_squrMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_red_squrMouseExited
-        red_squr.setBackground(new Color(255,255,255));
-        exit.setForeground(new Color(102,102,102));
-    }//GEN-LAST:event_red_squrMouseExited
-
-    private void red_squrMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_red_squrMousePressed
-        System.exit(0);
-    }//GEN-LAST:event_red_squrMousePressed
+    private void TitleMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TitleMousePressed
+        xMouse = evt.getX();
+        yMouse = evt.getY();
+    }//GEN-LAST:event_TitleMousePressed
 
     private void TitleMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TitleMouseDragged
         int x = evt.getXOnScreen();
@@ -465,10 +443,34 @@ public class Interfaz2 extends javax.swing.JFrame {
         this.setLocation(x-xMouse,y-yMouse);
     }//GEN-LAST:event_TitleMouseDragged
 
-    private void TitleMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TitleMousePressed
-        xMouse = evt.getX();
-        yMouse = evt.getY();
-    }//GEN-LAST:event_TitleMousePressed
+    private void red_squrMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_red_squrMousePressed
+        System.exit(0);
+    }//GEN-LAST:event_red_squrMousePressed
+
+    private void red_squrMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_red_squrMouseExited
+        red_squr.setBackground(new Color(255,255,255));
+        
+    }//GEN-LAST:event_red_squrMouseExited
+
+    private void red_squrMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_red_squrMouseEntered
+        red_squr.setBackground(new Color(204,0,0));
+        
+    }//GEN-LAST:event_red_squrMouseEntered
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "Tlf. 0985450690\n correo: marcelo2005jmsp@gmail.com"
+                , "Contácto", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        // TODO add your handling code here:
+        ManualUsuario manual=new ManualUsuario();      
+        manual.setVisible(true);
+        manual.setLocationRelativeTo(null);
+        this.dispose();
+
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -482,7 +484,6 @@ public class Interfaz2 extends javax.swing.JFrame {
     private javax.swing.JButton btnCalcular;
     private javax.swing.JButton btnLimpiar;
     public static javax.swing.JPanel content;
-    private javax.swing.JLabel exit;
     private javax.swing.JTextField funcionX;
     private javax.swing.JTextField funcionY;
     private javax.swing.JLabel jLabel1;
@@ -492,6 +493,8 @@ public class Interfaz2 extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JLabel lbdDerivadaX;
