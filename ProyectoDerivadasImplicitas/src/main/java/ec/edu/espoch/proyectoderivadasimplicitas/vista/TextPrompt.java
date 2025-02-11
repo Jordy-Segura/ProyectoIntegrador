@@ -9,7 +9,7 @@ package ec.edu.espoch.proyectoderivadasimplicitas.vista;
 
 /**
  *
- * @author Monkeyelgrande
+ * @author jordy
  */
 import java.awt.*;
 import java.awt.event.*;
