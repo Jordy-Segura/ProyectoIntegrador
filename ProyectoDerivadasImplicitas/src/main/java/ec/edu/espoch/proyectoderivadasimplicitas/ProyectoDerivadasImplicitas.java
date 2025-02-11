@@ -4,6 +4,8 @@
 
 package ec.edu.espoch.proyectoderivadasimplicitas;
 
+import ec.edu.espoch.proyectoderivadasimplicitas.vista.Interfaz2;
+
 /**
  *
  * @author jordy
@@ -11,7 +13,7 @@ package ec.edu.espoch.proyectoderivadasimplicitas;
 public class ProyectoDerivadasImplicitas {
 
     public static void main(String[] args) {
-        Interfaz Derivadas=new Interfaz();
+        Interfaz2 Derivadas=new Interfaz2();
         Derivadas.setVisible(true);
     }
 }
